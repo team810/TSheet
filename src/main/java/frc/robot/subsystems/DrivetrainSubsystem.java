@@ -14,14 +14,14 @@ public class DrivetrainSubsystem extends SubsystemBase {
     private final DifferentialDrive drive;
 	private static DrivetrainSubsystem INSTANCE;
 
-	@SuppressWarnings("WeakerAccess")
-	public static DrivetrainSubsystem getInstance() {
-		if (null == DrivetrainSubsystem.INSTANCE) {
-            INSTANCE = new DrivetrainSubsystem();
-		}
-		return INSTANCE;
-	}
-	private DrivetrainSubsystem() {
+	// @SuppressWarnings("WeakerAccess")
+	// public static DrivetrainSubsystem getInstance() {
+	// 	if (null == DrivetrainSubsystem.INSTANCE) {
+    //         INSTANCE = new DrivetrainSubsystem();
+	// 	}
+	// 	return INSTANCE;
+	// }
+	public DrivetrainSubsystem() {
         left1 = new Spark(0);
         left2 = new Spark(1);
         right1 = new Spark(2);

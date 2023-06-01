@@ -8,9 +8,9 @@ import frc.robot.subsystems.CannonSubsystem;
 
 public class FireCannon extends SequentialCommandGroup {
 	public FireCannon(CannonSubsystem cannon) {
-		// TODO: Add your sequential commands in the super() call, e.g.
-		//           super(new OpenClawCommand(), new MoveArmCommand());
-		super();
+		// Add your sequential commands in the super() call, e.g.
+		// super(new OpenClawCommand(), new MoveArmCommand());
+        super();
         addRequirements(cannon);
         addCommands(
                 new InstantCommand(() -> cannon.setCharge(true)),
@@ -19,6 +19,6 @@ public class FireCannon extends SequentialCommandGroup {
                 new InstantCommand(() -> cannon.setFire(true)),
                 new WaitCommand(1),
                 new InstantCommand(() -> cannon.setFire(false))
-        );
+                );
 	}
 }

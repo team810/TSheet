@@ -5,7 +5,7 @@ import frc.robot.subsystems.DrivetrainSubsystem;
 
 
 public class DrivetrainCommand extends CommandBase {
-	private final DrivetrainSubsystem drivetrainSubsystem = DrivetrainSubsystem.getInstance();
+	private final DrivetrainSubsystem drivetrainSubsystem = new DrivetrainSubsystem();
 
 	public DrivetrainCommand() {
 
