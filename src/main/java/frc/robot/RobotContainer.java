@@ -24,16 +24,25 @@ public class RobotContainer
     private final Joystick left;
     private final Joystick right;
 
-    private final CannonSubsystem[] cannons = {
-            new CannonSubsystem(0,1),
-            new CannonSubsystem(1,2),
-            new CannonSubsystem(2,3),
-            new CannonSubsystem(4,5)
-    };
+    private CannonSubsystem cannon1, cannon2, cannon3, cannon4; 
+
+    private CannonSubsystem[] cannons = new CannonSubsystem[4]; 
+
+
     public RobotContainer()
     {
         left = new Joystick(0);
         right = new Joystick(1);
+
+        cannon1 = new CannonSubsystem(4, 0); 
+        cannon2 = new CannonSubsystem(5, 1);
+        cannon3 = new CannonSubsystem(6, 2);
+        cannon4 = new CannonSubsystem(7, 3);
+
+        cannons[0] = cannon1; 
+        cannons[1] = cannon2; 
+        cannons[2] = cannon3; 
+        cannons[3] = cannon4; 
         // Configure the trigger bindings
 
         DrivetrainSubsystem.getInstance().setDefaultCommand(new RunCommand(() ->DrivetrainSubsystem.getInstance().set(
